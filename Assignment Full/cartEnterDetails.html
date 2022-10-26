@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="index.js"></script>
+        <style>
+            body{
+                width: inherit;
+                height: auto;
+                background: #E3DFDC;
+                mix-blend-mode: normal;;
+            }
+
+            .cartcontactinfo{
+                float: left;
+                width: 58%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between
+            }
+
+            .cartcontactinfoitems{
+                margin-left: 60px;
+                margin-top: 48px;
+                width: 100%;
+                max-width: 648px;
+                column-gap: 10px;
+                justify-content: space-between;
+            }
+
+            .form_widefield{
+                display: flex;
+                width: 100%;
+                max-width: 622px;
+                min-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-bottom: 32px;
+                padding-left: 20px;s 
+            }
+            
+            .form_narrowfieldleft{
+                width: 100%;
+                max-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-bottom: 32px;
+                padding-left: 20px;
+            }
+
+            .form_narrowfieldright{
+                width: 100%;
+                max-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                float: right;
+                margin-bottom: 32px;
+                padding-left: 20px;
+            }
+
+            .cartorder{
+                flex-grow: 1;
+                height: auto;
+                display: flex;
+                flex-direction: right;
+                justify-content: space-between;
+            }
+
+            .cartorderitems{
+                margin-right: 60px;
+                margin-left: 60px;
+                margin-top: 48px;
+                width: 100%;
+            }
+
+            .cartorderkohaku{
+                display: flex;
+                flex-wrap: wrap;
+                border: solid;
+                width: 100%;
+                max-width: 460x;
+                padding-bottom: 20px;
+                background-color:#D6D1CE;
+            }
+
+            .cartorderkohakuformitems{
+                width: 100%;
+                max-width: 100x;
+                position: relative; 
+                max-width: 400px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-left:30px; 
+            }
+
+            .cartkohakuformoptionsfield{
+                width: 100%;
+                max-width: 400px;
+                height: 48px;
+                padding-left: 20px;
+                overflow: hidden;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-left: 30px;
+                margin-right: 10px;
+                margin-bottom: 32px;
+            }
+
+            .cartkohakuformchecklistfield{
+                width: 100%;
+                max-width: 180px;
+                overflow: hidden;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+            }
+
+            .cartproceed{
+                margin-left: 50px;
+                flex-grow: 1;
+                padding-bottom: 32px;
+                display: flex;
+                flex-direction: right;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .cartwrapper{
+                width: inherit;
+            }
+
+        </style>
+        <title> 
+            My Cart
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="head_foot.css">
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <div class="container">
+                <div class="cart">
+                    <a href="cartEnterDetails.html"><img src="SingaImages/Shopping Cart.png" alt="Shopping Cart" ></a>
+   
+                </div>
+                    <a href="Homepage.html"><img src="SingaImages/Logo.png" alt="company_logo"></a>
+                <div class="social_platform">
+                    <a href="https://www.instagram.com/singakbd/"><img src="SingaImages/Instagram Circle.png" alt="Instagram" ></a>
+                    <a href="https://discord.gg/9fKZ5KubdT"><img src="SingaImages/Discord.png" alt="Discord" ></a>
+                </div>
+                
+            </div>
+            <nav style = "border: solid">
+                <a href="Homepage.html">HOME</a>
+                <a href="Keyboardspage.html">KEYBOARDS</a>
+                <a href="OrderShipping.html">ORDER + SHIPPING</a>
+                <a href="AboutUs.html">ABOUT US</a>
+                <a href="ContactUs.html">CONTACT</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="cartwrapper">
+            <!-- Contact Info Form Div -->
+            <div class="cartcontactinfo">
+                <!-- Contact Info Form Items -->
+                <div class="cartcontactinfoitems">
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold;">Contact Information</h2>
+                    <form action="cartConfirmDetails.html" method="POST">
+                        <!-- EMAIL -->
+                        <input type='text' class="form_widefield" id = "email" name='email' size='15' placeholder='Email' required/>
+
+                        <!--SHIPPING ADDRESS-->
+                        <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold;">Shipping Address</h2>
+                        <input type='text' class="form_narrowfieldleft" id="givenname" name='givenname' size='15' placeholder='Given Name' required/>
+                        <input type='text' class="form_narrowfieldright" id = "surname" name='surname' size='15' placeholder='Surname' required/>
+                        <input type='text' class="form_widefield" id = "address" name='address' size='15' placeholder='Address' required/>
+                        <input type='text' class="form_widefield" id = "apartmentsuite" name='apartmentsuite' size='15' placeholder='Apartment, suite, etc. (optional)'/>
+                        <input type='number' class="form_narrowfieldleft" id = "postcode" name='postcode' size='15' placeholder='Postcode' required/>
+                        <input type='text' class="form_narrowfieldright" id = "city" name='city' size='15' placeholder='City' required/>
+                        <input type='text' class="form_narrowfieldleft" id = "stateterritory" name='stateterritory' size='15' placeholder='State/ Territory/' required>
+                        <input type='text' class="form_narrowfieldright" id = "countryregion" name='countryregion' size='15' placeholder='Country/ Region' required/>
+                        <input type='number' class="form_widefield" id = "phone" name='phone' size='15' placeholder='Phone' required/>
+
+                        <!--BILLING ADDRESS OPTIONAL-->
+                        <!--h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold;">Billing Address</h2>
+                        <input type='text' class="form_narrowfieldleft" name='bagivenname' size='15' placeholder='Given Name'/>
+                        <input type='text' class="form_narrowfieldright" name='basurname' size='15' placeholder='Surname'/>
+                        <input type='text' class="form_widefield" name='baaddress' size='15' placeholder='Address'/>
+                        <input type='text' class="form_widefield" name='baapartmentsuite' size='15' placeholder='Apartment, suite, etc. (optional)'/>
+                        <input type='number' class="form_narrowfieldleft" name='bapostcode' size='15' placeholder='Postcode'/>
+                        <input type='text' class="form_narrowfieldright" name='bacity' size='15' placeholder='City'/>
+                        <input type='text' class="form_narrowfieldleft" name='bastateterritory' size='15' placeholder='State/ Territory/'>
+                        <input type='text' class="form_narrowfieldright" name='bacountryregion' size='15' placeholder='Country/ Region'/>
+                        <input type='number' class="form_widefield" name='baphone' size='15' placeholder='Phone'/-->
+                    </form>
+                </div>
+            </div>
+
+            <!-- Order Form Div -->
+            <div class="cartorder">
+                <!-- Order Form Items -->
+                <div class = "cartorderitems">
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-bottom: -16px">Order Sheet</h1>
+                    <p style="font-family: sans-serif, Roboto; font-size: 20px; width: 460px">
+                        <br>
+                        Note that only group buy winers are
+                        eligible to purchase group buy items.
+                        <br>   
+                    </p>
+                    
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-top: 30px">Available Items</h1>
+                    <!--Kohaku Order Form-->
+                    <div class = "cartorderkohaku">
+                        <img src="SingaImages/Singa_Kohaku2 1.png" style="margin-left: 30px; max-width: 100%; max-height: 115px;">
+                        <h1 style= "float: right; font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-top: 30px" >The Kohaku</h1>
+
+                        <form action="cartConfirmDetails.html" method="POST">
+                            <div>
+                                <!--Kohaku Choose Color-->
+                                <select class = "cartkohakuformoptionsfield" name="kohakucolor" id="kohakucolor" required>
+                                    <option value="null" disabled selected>Kohaku Color</option>
+                                    <option value="red">Red</option>
+                                    <option value="grey">Grey</option>
+                                    <option value="Silver">Silver</option>
+                                </select>
+
+                                <!--Kohaku Choose PCB-->
+                                <select class = "cartkohakuformoptionsfield" name="pcb_kit" id="pcb_kit" onclick="calculate()" required>
+                                    <option value="" disabled selected>PCB Selection</option>
+                                    <option value="2400">Solder Kit</option>
+                                    <option value="2500">Hotswap Kit</option>
+                                </select>
+                            </div>
+
+                            <div class = "cartorderkohakuformitems">
+                                <!--Kohaku Choose Extra Options-->
+                                <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold">Extras</h2>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="200" onclick="calculate()">
+                                    <label for="option1"> Extra Solder PCB</label><br>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="250" onclick="calculate()">
+                                    <label for="option2"> Extra Hotswap PCB</label><br>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="165" onclick="calculate()">
+                                    <label for="option3"> Extra Aluminium Plate</label><br>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="165" onclick="calculate()">
+                                    <label for="option4"> Extra Polycarbonate Plate</label><br>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="22" onclick="calculate()">
+                                    <label for="option5"> Extra Acrylic Piece</label><br>
+                                    <input style = "margin-bottom: 16px" type="checkbox" name="option" value="15" onclick="calculate()">
+                                    <label for="option5"> Gasket Set of 20 Pieces (4 Extra)</label><br>
+                                    
+                            </div>
+                            <textarea readonly style = "text-align: center; padding-top: 34px; margin-left: 25px; margin-top: 32px; border: 3px solid #000000; width: 100%; max-width: 400px; resize: none; background: white; font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold" id="ordertotal" name="ordertotal"></textarea>
+                        </form>
+                    </div>
+
+                </div>              
+            </div>
+
+            <script type="text/javascript">
+
+                //calculate options
+                function calculate() {
+                var el, i = 0;
+                var total = parseInt(document.getElementById("pcb_kit").value); //insert and set base PCB kit as initial price 
+                while(el = document.getElementsByName("option")[i++]) {
+                if(el.checked) { total= total + Number(el.value);} 
+                }
+
+                // Final cart total
+                var h2 = document.getElementById('ordertotal');
+                h2.innerHTML = "Cart Total : RM " +total ;
+                }
+
+            </script>
+
+            <!--Check Out-->
+            <div style="width: 100%; style: flex">
+                <div style = "width: 448px; margin-left: 840px" class="cartproceed">
+                    <p style="font-family: sans-serif, Roboto; font-size: 20px; width: 448px" >
+                        <br>
+                        Kindly note that SingaKBD only accepts payment through iPay88-compatible channels.
+                        <br>
+                        <br>
+                        Please ensure that your credit or debit card is compatible before proceeding with payment.
+                        <br> 
+                        <br>
+                        Only proceed with your order if you are ready to make payment as all incomplete orders will be cancelled after 2 hours.
+                        <br>
+                    </p>
+                        
+                    <img src="SingaImages/PaymentOption.png" style="width: 100%; max-width: 400px; max-height: 96px; margin-bottom: 48px;">
+
+                    <form action="cartConfirmDetails.html" method="POST">
+                        <input type="image" src="SingaImages/continue_button.png" value="Place Order" onclick="gatherOrderDetails()"/>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="border: 3px solid #000000;">
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">Join our Discord and</h3>
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">follow us on Instagram</h3>
+            <br>
+            <br>
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">TERMS AND CONDITIONS</h3>
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">&copy; 2021 SINGAKBD</h3>
+        </div>
+    </body>
+</html>

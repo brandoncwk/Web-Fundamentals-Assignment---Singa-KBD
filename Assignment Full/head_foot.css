@@ -1,0 +1,44 @@
+.container{
+    background: #EE801E;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding:3%;
+}
+
+.social_platform{
+ margin: 25px;
+}
+
+.cart{
+    margin: 25px;
+    margin-right: 10em;
+}
+
+img{
+    margin: 25px;
+}
+nav{
+    background: #D6D1CE;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-family:sans-serif, Roboto;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    width: inherit; 
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}

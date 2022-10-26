@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="result.js" ></script>
+        
+        <style>
+            body{
+                width: inherit;
+                height: auto;
+                background: #E3DFDC;
+                mix-blend-mode: normal;;
+            }
+
+            .confirminstructions{
+                width: 100%;
+                height: 100%
+                max-height: 144px;
+                background-color: orange;
+                text-align: center;
+            }
+
+            .cartcontactinfo{
+                float: left;
+                width: 58%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between
+            }
+
+            .cartcontactinfoitems{
+                margin-left: 60px;
+                margin-top: 48px;
+                width: 100%;
+                max-width: 648px;
+                column-gap: 10px;
+                justify-content: space-between;
+            }
+
+            .form_widefield{
+                display: flex;
+                width: 100%;
+                max-width: 620px;
+                min-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-bottom: 32px;
+                padding-left: 20px;s 
+            }
+            
+            .form_narrowfieldleft{
+                width: 100%;
+                max-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-bottom: 32px;
+                padding-left: 20px;
+            }
+
+            .form_narrowfieldright{
+                width: 100%;
+                max-width: 290px;
+                height: 48px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                float: right;
+                margin-bottom: 32px;
+                padding-left: 20px;
+            }
+
+            .cartorder{
+                flex-grow: 1;
+                height: auto;
+                border-style: solid;
+                display: flex;
+                flex-direction: right;
+                justify-content: space-between;
+            }
+
+            .cartorderitems{
+                margin-right: 60px;
+                margin-left: 60px;
+                margin-top: 48px;
+                margin-bottom: 48px;
+                width: 100%;
+            }
+
+            .cartorderkohaku{
+                width: 100%;
+                max-width: 460x;
+                background-color: orange;
+            }
+
+            .cartorderkohakuformitems{
+                width: 100%;
+                max-width: 100x;
+                background-color: orange;
+                position: relative; 
+                max-width: 300px;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-left:25px; 
+            }
+
+            .cartkohakuformoptionsfield{
+                width: 100%;
+                max-width: 180px;
+                height: 48px;
+                padding-left: 20px;
+                overflow: hidden;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+                margin-left: 25px;
+                margin-right: 10px;
+                margin-bottom: 32px;
+            }
+
+            .cartkohakuformchecklistfield{
+                width: 100%;
+                max-width: 180px;
+                padding-left: 20px;s
+                overflow: hidden;
+                font-family: sans-serif, Roboto; 
+                font-size: 18px;
+            }
+
+            .cartproceed{
+                flex-grow: 1;
+                height: auto;
+                display: flex;
+                flex-direction: right;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .cartwrapper{
+                width: inherit;
+            }
+
+        </style>
+        <title> 
+            Confirm Order Details
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="head_foot.css">
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <div class="container">
+                <div class="cart">
+                    <a href="cartEnterDetails.html"><img src="SingaImages/Shopping Cart.png" alt="Shopping Cart" ></a>
+   
+                </div>
+                    <a href="Homepage.html"><img src="SingaImages/Logo.png" alt="company_logo"></a>
+                <div class="social_platform">
+                    <a href="https://www.instagram.com/singakbd/"><img src="SingaImages/Instagram Circle.png" alt="Instagram" ></a>
+                    <a href="https://discord.gg/9fKZ5KubdT"><img src="SingaImages/Discord.png" alt="Discord" ></a>
+                </div>
+                
+            </div>
+            <nav style = "border: solid">
+                <a href="Homepage.html">HOME</a>
+                <a href="Keyboardspage.html">KEYBOARDS</a>
+                <a href="OrderShipping.html">ORDER + SHIPPING</a>
+                <a href="AboutUs.html">ABOUT US</a>
+                <a href="ContactUs.html">CONTACT</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="confirminstructions">
+            <h1 style="font-family: sans-serif, Roboto; font-size: 36px; font-weight: bold">Please confirm your order details</h2>
+        </div>
+
+        <div class="cartwrapper">
+            <!-- Contact Info Form Div -->
+            <div class="cartcontactinfo">
+                <!-- Contact Info Form Items -->
+                <div class="cartcontactinfoitems" style="font-family: sans-serif, Roboto; font-size: 20px; height: 800px ">
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold;">Contact Information<span id="confirmgivenname"></span></h2>
+                    <p>
+                    Email: <span style="font-weight: bold; background-color: orange" id="result-email"></span>
+                    </p>
+
+                    <p>
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-top: 36px">Recipient</h2>
+                    Name: <span style="font-weight: bold; background-color: orange" id="result-surname"></span>, <span style="font-weight: bold; background-color: orange" id="result-givenname"></span><br>
+                    
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-top: 36px">Shipping Address</h2>
+                    Destination:
+                    <div style="font-weight: bold; background-color: orange">
+                        <span id="result-address"></span><br>
+                        <span id="result-apartmentsuite"></span><br>
+                        <span id="result-city"></span>
+                        <span id="result-postcode"></span> <span id="result-stateterritory"></span>
+                        <span id="result-countryregion"></span>
+                    </div>
+                    </p>
+                    Recipient Phone:
+                        <span style="font-weight: bold; background-color: orange" id="result-phone"></span> 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Order Form Div -->
+            <div class="cartorder">
+                <!-- Order Form Items -->
+                <div class = "cartorderitems">
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-bottom: -16px">Order Sheet</h1>
+                    <p style="font-family: sans-serif, Roboto; font-size: 20px; width: 460px">
+                        <br>
+                        Note that only group buy winners are
+                        eligible to purchase group buy items.
+                        <br>   
+                    </p>
+                    
+                    <h1 style="font-family: sans-serif, Roboto; font-size: 30px; font-weight: bold; margin-top: 30px;">My Singa Order</h1>
+                    <!--Kohaku Order Form-->
+                    <div class = "cartorderkohaku" style="font-family: sans-serif, Roboto; font-size: 20px; font-weight: bold; margin-bottom: -16px" >
+                            </p>
+                                <span id="result-ordertotal"></span> 
+                            </p>
+                        </div>
+                    </div>
+
+                </div>              
+            </div>
+
+            <!--Confirm Order Wrapper-->
+            <div style = "width: 448px; margin-left: 840px; margin-bottom: 60px">
+                <p style="font-family: sans-serif, Roboto; font-size: 20px; width: 448px" >
+                    <br>
+                    Kindly note that SingaKBD only accepts payment through iPay88-compatible channels.
+                    <br>
+                    <br>
+                    Please ensure that your credit or debit card is compatible before proceeding with payment.
+                    <br> 
+                    <br>
+                    Only proceed with your order if you are ready to make payment as all incomplete orders will be cancelled after 2 hours.
+                    <br>
+                </p>
+                    
+                <img src="SingaImages/PaymentOption.png" style="width: 100%; max-width: 400px; max-height: 96px; margin-bottom: 48px;">
+
+                <form action="cartConfirmDetails.html" style = "margin-left: -20px" method="POST">
+                    <a href="ThankYou.html"><img src="SingaImages/place_order.png" alt="Place Order"></a> 
+                </form>    
+            </div>
+        </div> <!--End Cart Wrapper-->
+
+        <!--Footer-->
+        <div style="font-family: sans-serif, Roboto; text-align: center; border: solid">
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">Join our Discord and</h3>
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">follow us on Instagram</h3>
+            <br>
+            <br>
+            <a style="font-family: sans-serif, Roboto; text-align: center;" href="TermsConditions.html">TERMS AND CONDITIONS</a>
+            <h3 style="font-family: sans-serif, Roboto; text-align: center;">&copy; 2021 SINGAKBD</h3>
+        </div>
+    </body>
+</html>

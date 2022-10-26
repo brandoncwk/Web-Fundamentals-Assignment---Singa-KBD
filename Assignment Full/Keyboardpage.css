@@ -1,0 +1,91 @@
+body{
+    background-color: #D6D1CE;
+}
+
+.keyboardbackground{
+    
+    background-image: url("image/keyboardbackground.png");
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+    
+}
+
+.content{
+    background-color: #D6D1CE;
+}
+
+.Topic{
+    font-family: sans-serif, Roboto; 
+    font-size: 40px; 
+    letter-spacing: 4px;";
+
+}
+.NewRelease{
+    
+    border: solid;
+    width: inherit;
+}
+.ContentContainer{
+    width: inherit; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+ul{
+    margin-left: 0em;
+}
+li{
+    font-family:sans-serif, Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    }
+
+.Newinfobtn{
+    width: 700px;
+    margin:0;
+    margin-top: 5em;
+}
+
+.ItemImage{
+    margin: 0;
+}
+.PastItem{
+    border: solid;
+    width: 100%;
+    max-width: 420px;
+    margin-right: 20px;
+}
+.BrandName{
+    text-align: center;
+}
+.ShortInfo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.socialmediaplatform{
+    display: flex;
+    flex-direction: column;
+}
+p{
+    font-family:sans-serif, Roboto;
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+
+}
+.SoftwareDownload{
+    
+    width: inherit;
+    padding-left: 5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    border: solid;
+
+}
